@@ -78,3 +78,21 @@ html, body {
     opacity: 0;
   }
 }
+
+.fullscreen-tip {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    font-size: 1.2vw;
+    color: white;
+    animation: fadeIn 5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

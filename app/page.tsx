@@ -19,6 +19,8 @@ export default function LoadingPage() {
       <div className="header4">
         <p>Press &#9398; to continue.</p></div>
     </div>
+
+    <p className="fullscreen-tip">For the best experience, view in fullscreen (F11).</p>
     </>
 
 
