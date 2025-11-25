@@ -7,7 +7,7 @@ export default function Cursor() {
   let cursorX = 0, cursorY = 0;
   let jitterX = 0, jitterY = 0;
   let lastMouseX = 0, lastMouseY = 0;
-  let stillFrames = 0; // counts how long the mouse has been still
+  let stillFrames = 0; // counts how many frames the mouse has been still
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -29,14 +29,14 @@ export default function Cursor() {
 
     function animate() { 
       // trailing effect
-      cursorX += (mouseX - cursorX) * 0.1; // range 0 to 1 factor
+      cursorX += (mouseX - cursorX) * 0.1;
       cursorY += (mouseY - cursorY) * 0.1;
 
-      // Detect if mouse is still
+      // Check if mouse is still
       if (Math.abs(mouseX - lastMouseX) < 0.1 && Math.abs(mouseY - lastMouseY) < 0.1) {
         stillFrames++;
       } else {
-        stillFrames = 0;
+        stillFrames = 0; // reset if currently moving.
       }
 
       lastMouseX = mouseX;
