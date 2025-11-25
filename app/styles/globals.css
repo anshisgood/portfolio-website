@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+
+    filter: sepia(10%) saturate(150%) brightness(90%) contrast(110%) blur(0.5px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: url("../images/wii-cursors/default.cur"), auto;
+}
+
+a {
+    cursor: url("../images/wii-cursors/help.cur"), auto;
+}
+
+
+
+@font-face {
+    font-family: "RodinNTLG";
+    src: url("../fonts/FOT-RodinNTLG Pro DB.otf");
+}
+@font-face {
+    font-family: "RodinNTLG_Bold";
+    src: url("../fonts/FOT-RodinNTLG Pro EB.otf");
+}
