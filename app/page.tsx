@@ -1,8 +1,11 @@
+import Cursor from "./scripts/cursor.js";
 import "./styles/loadingpage.css";
 
 export default function LoadingPage() {
   return (
     <>
+    <Cursor/>
+
     <div className="container">
       <div className="header1"><p>WARNING-HEALTH AND SAFETY</p></div>
       <div className="header2">
