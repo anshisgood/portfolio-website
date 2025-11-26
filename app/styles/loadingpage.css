@@ -1,7 +1,3 @@
-html, body {
-    background-color: #101010;
-}
-
 * {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -9,7 +5,7 @@ html, body {
     user-select: none;
 }
 
-.container {
+.health-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -18,58 +14,58 @@ html, body {
     color: white;
 }
 
-.container .header1,
-.container .header2,
-.container .header3,
-.container .header4 {
+.health-container .header1,
+.health-container .header2,
+.health-container .header3,
+.health-container .header4 {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container .header1 p,
-.container .header2 p,
-.container .header3 p,
-.container .header4 p {
+.health-container .header1 p,
+.health-container .header2 p,
+.health-container .header3 p,
+.health-container .header4 p {
     font-family: "RodinNTLG";
     text-align: center;
 
     transform: scaleX(1.2);
 }
 
-.container .header1 {
+.health-container .header1 {
     height: 25%;
     padding-top: 5vw;
     /* border: 1px solid blue; */
 }
-.container .header1 p {
+.health-container .header1 p {
     font-family: "RodinNTLG_Bold";
     font-size: 2.8vw;
 }
 
-.container .header2 {
+.health-container .header2 {
     height: 30%;
     /* border: 1px solid red; */
 }
-.container .header2 p {
+.health-container .header2 p {
     font-size: 2vw;
 }
 
-.container .header3 {
+.health-container .header3 {
     height: 20%;
     /* border: 1px solid green; */
 }
-.container .header3 p {
+.health-container .header3 p {
     font-size: 1.7vw;
 }
 
-.container .header4 {
+.health-container .header4 {
     height: 25%;
     padding-bottom: 5vw;
     animation: blinker 1.3s linear infinite;
     /* border: 1px solid pink; */
 }
-.container .header4 p {
+.health-container .header4 p {
     font-size: 2vw;
 }
 
@@ -86,13 +82,4 @@ html, body {
     font-size: 1.2vw;
     color: white;
     animation: fadeIn 5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
