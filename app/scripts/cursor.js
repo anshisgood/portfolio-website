@@ -67,9 +67,6 @@ export default function Cursor() {
   }, []);
 
   return (
-    <div
-      ref={cursorRef}
-      className="default-cursor"
-    />
+    <div ref={cursorRef} className="default-cursor"/>
   );
 }

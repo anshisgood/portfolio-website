@@ -5,9 +5,40 @@
     height: 100%;
 
     color: black;
-    /* 22.6MB!!! This should only be temporary! If you're seeing this, I must've forgotten.. */
-    background-image: url("/images/wii_menu_background.svg");
+    background-image: url("/images/wii-menu-background.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+
+.menu-items-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 85%;
+    height: 69.2%;
+    top: 3%;
+    left: 0.3%;
+    
+    /* background-color: blue; */
+    opacity: 100%;
+}
+
+.menu-items-container .item {
+    position: relative;
+    width: 23.5%;
+    height: 31%;
+    margin-right: 1.2%;
+    margin-bottom: 1.4%;
+    border-radius: 20px;
+    border: 0.1vw solid gray;
+    outline: 0.15vw solid gray; 
+    transition: outline-width 0.12s ease-in-out;
+
+    background-color: white;
+}
+
+.menu-items-container .item:hover {
+    outline: 0.55vw solid rgba(98, 200, 235, 0.55);
 }
