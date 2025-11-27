@@ -1,0 +1,13 @@
+.menu-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    color: black;
+    /* 22.6MB!!! This should only be temporary! If you're seeing this, I must've forgotten.. */
+    background-image: url("/images/wii_menu_background.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}

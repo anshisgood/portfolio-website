@@ -1,5 +1,9 @@
+import "../styles/menuscreen.css";
+
 export default function MenuScreen() {
     return (
-      <p style={{color: "white"}}> need to make... </p>
+      <div className="menu-container">
+        <p>need to make..</p>
+      </div>
     )
 }

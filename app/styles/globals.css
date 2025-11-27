@@ -6,7 +6,7 @@ html, body {
   overflow: hidden;
   background-color: #101010;
 
-  filter: sepia(10%) saturate(150%) brightness(90%) contrast(110%) blur(0.5px);
+  filter: blur(0.5px);
 }
 
 * {
@@ -26,13 +26,13 @@ html, body {
   left: -15px; /* align pointer with custom image */
   width: 48px;
   height: 48px;
-  background: url('../images/wii-cursors/default.cur'); /* custom image */
+  background: url('/images/wii-cursors/default.cur'); /* custom image */
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 50;
 }
 .hovering-link {
-  background: url('../images/wii-cursors/help.cur');
+  background: url('/images/wii-cursors/help.cur');
   z-index: 51;
 }
 
@@ -55,9 +55,9 @@ html, body {
 
 @font-face {
     font-family: "RodinNTLG";
-    src: url("../fonts/FOT-RodinNTLG Pro DB.otf");
+    src: url("/fonts/FOT-RodinNTLG Pro DB.otf");
 }
 @font-face {
     font-family: "RodinNTLG_Bold";
-    src: url("../fonts/FOT-RodinNTLG Pro EB.otf");
+    src: url("/fonts/FOT-RodinNTLG Pro EB.otf");
 }

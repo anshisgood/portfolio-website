@@ -1,4 +1,4 @@
-import "../styles/loadingpage.css";
+import "../styles/healthscreen.css";
 
 export default function HealthScreen() {
     return (

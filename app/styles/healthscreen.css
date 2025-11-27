@@ -1,0 +1,85 @@
+.health-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: white;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    filter: sepia(10%) saturate(150%) brightness(90%) contrast(110%);
+}
+
+.health-container .header1,
+.health-container .header2,
+.health-container .header3,
+.health-container .header4 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.health-container .header1 p,
+.health-container .header2 p,
+.health-container .header3 p,
+.health-container .header4 p {
+    font-family: "RodinNTLG";
+    text-align: center;
+
+    transform: scaleX(1.2);
+}
+
+.health-container .header1 {
+    height: 25%;
+    padding-top: 5vw;
+    /* border: 1px solid blue; */
+}
+.health-container .header1 p {
+    font-family: "RodinNTLG_Bold";
+    font-size: 2.8vw;
+}
+
+.health-container .header2 {
+    height: 30%;
+    /* border: 1px solid red; */
+}
+.health-container .header2 p {
+    font-size: 2vw;
+}
+
+.health-container .header3 {
+    height: 20%;
+    /* border: 1px solid green; */
+}
+.health-container .header3 p {
+    font-size: 1.7vw;
+}
+
+.health-container .header4 {
+    height: 25%;
+    padding-bottom: 5vw;
+    animation: blinker 1.3s linear infinite;
+    /* border: 1px solid pink; */
+}
+.health-container .header4 p {
+    font-size: 2vw;
+}
+
+@keyframes blinker {
+  70% {
+    opacity: 0;
+  }
+}
+
+.fullscreen-tip {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    font-size: 1.2vw;
+    color: white;
+    animation: fadeIn 5s ease-in-out forwards;
+}
