@@ -8,6 +8,21 @@ export default function Cursor() {
   let jitterX = 0, jitterY = 0;
   let lastMouseX = 0, lastMouseY = 0;
   let stillFrames = 0; // counts how many frames the mouse has been still
+  let customMouseX = 0, customMouseY = 0; // the position of the mouse displayed on screen.
+
+  let lastMenuItem = null;
+  const menuItemHoverCheck = (e) => {
+    if (lastMenuItem && lastMenuItem !== e) {
+      // if no longer hovering, reset last menu style.
+      lastMenuItem.style.outline = "0.15vw solid gray";
+      lastMenuItem = null;
+    }
+
+    if (e.classList.contains("menu-item")) {
+      e.style.outline = "0.55vw solid rgba(98, 200, 235, 0.55)";
+      lastMenuItem = e;
+    }
+  }
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -16,17 +31,11 @@ export default function Cursor() {
     const handleMouseMove = (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-
-      // check if hovering over link, change cursor image
-      if (e.target.tagName === "A") {
-        cursor.classList.add("hovering-link");
-      } else {
-        cursor.classList.remove("hovering-link");
-      }
     };
 
     document.addEventListener("mousemove", handleMouseMove);
 
+  // Mouse Trailing/Dragging Animation Section:
     function animate() { 
       // trailing effect
       cursorX += (mouseX - cursorX) * 0.1;
@@ -52,14 +61,30 @@ export default function Cursor() {
         jitterY *= 0.9;
       }
 
+      customMouseX = cursorX + jitterX;
+      customMouseY = cursorY + jitterY;
+
       if (cursor) {
-        cursor.style.transform = `translate(${cursorX + jitterX}px, ${cursorY + jitterY}px)`;
+        cursor.style.transform = `translate(${customMouseX}px, ${customMouseY}px)`;
       }
 
       requestAnimationFrame(animate);
     }
 
     animate();
+
+  // Mouse Logic Section:
+    const elementHoveringOver = e.target;
+
+    // if hovering over link, change cursor image
+    if (elementHoveringOver.tagName == "A") {
+      cursor.classList.add("hovering-link");
+    } else { // reset if not hovering over link:
+      cursor.classList.remove("hovering-link");
+    }
+
+    // hovering over menu item, change style
+    menuItemHoverCheck(elementHoveringOver);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);

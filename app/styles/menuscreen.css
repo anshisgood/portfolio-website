@@ -25,7 +25,7 @@
     opacity: 100%;
 }
 
-.menu-items-container .item {
+.menu-item {
     position: relative;
     width: 23.5%;
     height: 31%;
@@ -37,8 +37,4 @@
     transition: outline-width 0.12s ease-in-out;
 
     background-color: white;
-}
-
-.menu-items-container .item:hover {
-    outline: 0.55vw solid rgba(98, 200, 235, 0.55);
 }

@@ -9,20 +9,20 @@ export default function MenuScreen() {
         <img src={"/images/wii-SD.png"} style={{position: "absolute", width: "4vw", bottom: "1.9%", left: "18.5%"}}></img>
         
         <div className="menu-items-container">
-          <div className="item"></div>
-          <div className="item"></div>
-          <div className="item"></div>
-          <div className="item"></div>
+          <div className="menu-item"></div>
+          <div className="menu-item"></div>
+          <div className="menu-item"></div>
+          <div className="menu-item"></div>
 
-          <div className="item"></div>
-          <div className="item"></div>
-          {/* <div className="item"></div>
-          <div className="item"></div>
+          <div className="menu-item"></div>
+          <div className="menu-item"></div>
+          {/* <div className="menu-item"></div>
+          <div className="menu-item"></div>
 
-          <div className="item"></div>
-          <div className="item"></div>
-          <div className="item"></div>
-          <div className="item"></div> */}
+          <div className="menu-item"></div>
+          <div className="menu-item"></div>
+          <div className="menu-item"></div>
+          <div className="menu-item"></div> */}
         </div>
       
       </div>

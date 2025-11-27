@@ -8,6 +8,7 @@ import Cursor from "./scripts/cursor.js";
 export default function App() {
   const [screen, setScreen] = useState("health"); // "health", "menu"
   const [isVisible, setIsVisible] = useState(true);
+
   const clickSound = new Howl({
     src: ["/sfx/click.mp3"]
   });
@@ -36,6 +37,7 @@ export default function App() {
     }, 1000);
   }
 
+  // Keyboard logic:
   useEffect(() => {
     const handleKeyDown = (e: { key: string; }) => {
       if (screen == "health" && (e.key == "Enter" || e.key == " " || e.key.toLowerCase() == "a")) {
