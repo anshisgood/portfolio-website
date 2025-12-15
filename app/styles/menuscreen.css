@@ -1,25 +1,48 @@
+.stretched-background {
+    position: absolute;
+    width: 100%;
+    height: 1510px;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    object-fit: cover;
+    object-position: center center;
+}
+
 .menu-container {
     position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
+    width: 1280px;
+    height: 720px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     color: black;
-    background-image: url("/images/wii-menu-background.svg");
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("/images/wii-menu-background.png"); */
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: 1280px 720px;
 }
 
 .menu-items-container {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     width: 85%;
-    height: 69.2%;
-    top: 3%;
-    left: 0.3%;
+    height: 62%;
+    top: 8.5%;
+    left: 8.5%;
     
     /* background-color: blue; */
     opacity: 100%;

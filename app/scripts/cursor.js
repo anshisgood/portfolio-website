@@ -3,12 +3,12 @@ import { useEffect, useRef } from "react";
 
 export default function Cursor() {
   const cursorRef = useRef(null);
-  let mouseX = 0, mouseY = 0;
+  let mouseX = 0, mouseY = 0; // actual mouse pos (not displayed)
   let cursorX = 0, cursorY = 0;
   let jitterX = 0, jitterY = 0;
   let lastMouseX = 0, lastMouseY = 0;
   let stillFrames = 0; // counts how many frames the mouse has been still
-  let customMouseX = 0, customMouseY = 0; // the position of the mouse displayed on screen.
+  let customMouseX = 0, customMouseY = 0; // the pos of the mouse displayed on screen.
 
   let lastMenuItem = null;
   const menuItemHoverCheck = (e) => {
@@ -27,10 +27,23 @@ export default function Cursor() {
   useEffect(() => {
     const cursor = cursorRef.current;
 
-    // track mouse
+    // track mouse & mouse logic:
     const handleMouseMove = (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
+
+      const elementHoveringOver = document.elementFromPoint(customMouseX, customMouseY);
+      if (elementHoveringOver instanceof HTMLElement) {
+        // if hovering over link, change cursor image
+        if (elementHoveringOver.tagName == "A") {
+          cursor.classList.add("hovering-link");  
+        } else { // reset if not hovering over link:
+          cursor.classList.remove("hovering-link");
+        }
+
+        // hovering over menu item, change style
+        menuItemHoverCheck(elementHoveringOver);
+      }
     };
 
     document.addEventListener("mousemove", handleMouseMove);
@@ -73,19 +86,7 @@ export default function Cursor() {
 
     animate();
 
-  // Mouse Logic Section:
-    const elementHoveringOver = e.target;
-
-    // if hovering over link, change cursor image
-    if (elementHoveringOver.tagName == "A") {
-      cursor.classList.add("hovering-link");
-    } else { // reset if not hovering over link:
-      cursor.classList.remove("hovering-link");
-    }
-
-    // hovering over menu item, change style
-    menuItemHoverCheck(elementHoveringOver);
-
+  // Reset Event Listener:
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
