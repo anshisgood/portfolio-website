@@ -19,7 +19,7 @@ export default function Cursor() {
     }
 
     if (e.classList.contains("menu-item")) {
-      e.style.outline = "0.55vw solid rgba(98, 200, 235, 0.55)";
+      e.style.outline = "0.55vw solid rgba(98, 200, 235, 0.6)";
       lastMenuItem = e;
     }
   }

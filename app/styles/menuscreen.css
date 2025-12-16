@@ -1,7 +1,7 @@
 .stretched-background {
     position: absolute;
     width: 100%;
-    height: 1510px;
+    height: 1512px;
     
     top: 50%;
     left: 50%;
@@ -60,4 +60,19 @@
     transition: outline-width 0.12s ease-in-out;
 
     background-color: white;
+    background-size: cover;
 }
+
+.mii-channel {
+    background-image: url("/images/channel-banners/mii-channel.png");
+}
+.photo-channel {
+    background-image: url("/images/channel-banners/photo-channel.jpg");
+}
+.forecast-channel {
+    background-image: url("/images/channel-banners/forecast-channel.png");
+}
+.wii-shop-channel {
+    background-image: url("/images/channel-banners/wii-shop-channel.svg");
+}
+

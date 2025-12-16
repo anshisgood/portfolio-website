@@ -9,6 +9,7 @@ export default function App() {
   const [screen, setScreen] = useState("health"); // "health", "menu"
   const [isVisible, setIsVisible] = useState(true);
 
+  // sfx:
   const clickSound = new Howl({
     src: ["/sfx/click.mp3"]
   });
@@ -22,6 +23,7 @@ export default function App() {
     volume: 1.2
   })
 
+  // methods:
   const goToMenu = () => {
     clickSound.play();
     var id1 = startSound.play();
@@ -58,6 +60,11 @@ export default function App() {
       window.removeEventListener("click", handleClick);
     }
   }, [screen])
+
+
+
+
+
 
   return (
     <>
